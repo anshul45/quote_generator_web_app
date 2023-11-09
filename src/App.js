@@ -1,12 +1,14 @@
 import React from "react";
-import Home from "./Page/Home";
-import Header from "./Components/Header";
+
+import store from "./utils/store";
+import { Provider } from "react-redux";
+import HomePage from "./Page/HomePage";
 
 const App = () => {
   return (
-    <div>
-      <Header />
-    </div>
+    <Provider store={store}>
+      <HomePage />
+    </Provider>
   );
 };
 
